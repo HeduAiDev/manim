@@ -227,7 +227,7 @@ def get_module_with_inserted_embed_line(
     construct method. If there is an argument passed in, it will insert the line after
     the last line in the sourcefile which includes that string.
     """
-    with open(file_name, 'r') as fp:
+    with open(file_name, 'r', encoding="utf-8") as fp:
         lines = fp.readlines()
 
     try:
@@ -278,7 +278,7 @@ def get_module_with_inserted_embed_line(
     new_lines.insert(prev_line_num + 1, inserted_line)
     new_file = file_name.replace(".py", "_insert_embed.py")
 
-    with open(new_file, 'w') as fp:
+    with open(new_file, 'w', encoding="utf-8") as fp:
         fp.writelines(new_lines)
 
     module = get_module(new_file)

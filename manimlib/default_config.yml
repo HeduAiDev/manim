@@ -18,8 +18,8 @@ directories:
   temporary_storage: ".\\temp_files"
 universal_import_line: "from manimlib import *"
 style:
-  tex_template: "default"
-  font: "Consolas"
+  tex_template: "E:\\Laboratory\\manim\\manimlib\\tex_templates\\ctex_template.tex"
+  font: "FOT-TsukuARdGothic Std"
   text_alignment: "LEFT"
   background_color: "#333333"
 # Set the position of preview window, you can use directions, e.g. UL/DR/OL/OO/...

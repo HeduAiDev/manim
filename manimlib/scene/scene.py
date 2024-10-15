@@ -758,6 +758,7 @@ class Scene(object):
         revert to the state of the scene the first time this function
         was called on a block of code starting with that comment.
         """
+        globals().update(inspect.currentframe().f_back.f_globals)
         shell = get_ipython()
         if shell is None or self.window is None:
             raise Exception(
@@ -808,6 +809,7 @@ class Scene(object):
 
         self.stop_skipping()
         self.show_animation_progress = prev_progress
+        inspect.currentframe().f_back.f_globals.update(globals())
 
     def checkpoint(self, key: str):
         self.checkpoint_states[key] = self.get_state()

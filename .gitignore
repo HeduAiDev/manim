@@ -153,3 +153,9 @@ dmypy.json
 /custom_config.yml
 /temp_files
 /assets
+/projects
+*.aux
+*.fls
+*.pdf
+*.fdb_latexmk
+*.gz
